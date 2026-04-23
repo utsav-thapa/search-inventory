@@ -20,10 +20,18 @@ public class Main {
             System.out.printf("\n"+"%d \t %s \t \t %.2f",a.getId(),a.getName(),a.getPrice());
         }
         System.out.println("\n");
-        System.out.println("What product would you like to search?");
+        System.out.println("What product would you like to search? Enter product name.");
 
         Scanner input = new Scanner(System.in);
         String userInput = input.nextLine();
+        for (int i = 0; i < inventory.size(); i++) {
+            a = inventory.get(i);
+            if (userInput.equals(a.getName())) {
+                System.out.println("ID \t Product Name \t \t Price:");
+                System.out.printf("\n"+"%d \t %s \t \t %.2f",a.getId(),a.getName(),a.getPrice());
+            }
+            
+        }
 
 
     }
